@@ -26,7 +26,7 @@ RunWorker(workerNodeName, GuiCtrlObj, Info){
     global master, controls
     controls[workerNodeName]["btnRun"].Enabled := 0
     controls[workerNodeName]["txtRet"].Text := ""
-    master.runWorker(workerNodeName, "Worker " workerNodeName, "Sample Command", "Do Something", TaskComplete)
+    master.runWorker("Worker.ahk", workerNodeName, "Worker " workerNodeName, "Sample Command", "Do Something", TaskComplete)
 }
 
 ; Called when a worker completes a task

@@ -23,7 +23,7 @@ Class MasterLib{
     ; Normal operation - start a worker and pass it needed info to send a message back with it's HWND
     ; We can't just get the HWND from the process ID, because we are using Run, and the GUI may not be active by the time Run executes.
     ; We can't use RunWait because it would never return
-    runWorker(workerNodeName, workerTitle, taskName, task, callback){
+    runWorker(scriptName, workerNodeName, workerTitle, taskName, task, callback){
         workerNodeName := workerNodeName ""
         workerTitle := workerTitle ""
         this._taskCompleteCallbacks[workerTitle] := callback
